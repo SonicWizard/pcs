@@ -1,9 +1,16 @@
+/* Angular Modules */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
+/* App Root */
 import { AppComponent } from './app.component';
+
+/* Feature Modules */
+import { AccountsModule } from './accounts/accounts.module';
+
+/* Routing Module */
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -11,10 +18,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+	AccountsModule,
+	AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
